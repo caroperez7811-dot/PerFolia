@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Per Folia Oficial</title>
+  <link rel="stylesheet" href="https://use.typekit.net/erq8iyr.css">
+  <style>
+    body {
+      text-align: center;
+      font-family: "boucherie-cursive", sans-serif;
+      margin: 0;             
+      padding: 0;             
+      overflow-x: hidden;
+    }
+
+    section {
+      display: none; 
+      padding: 50px 20px;
+      min-height: 100vh;     
+      box-sizing: border-box;
+    }
+
+    section.active {
+      display: block;
+    }
+
+    button {
+      background-color: #FCFACF;
+      color: #1A4C63;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background-color: #ECD0DE;
+    }
+    
+    img {
+      margin-top: 40px;
+      width: 100px;
+    }
+  </style>
+  <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/molinariosvalentina6-droid/Per-Folia---2025-/refs/heads/main/Assets/12%20junio.png"/>
+</head>
+
+
+<body>
+
+<div id="musica">
+<audio id="musicaFondo" src="https://github.com/molinariosvalentina6-droid/Per-Folia---2025-/blob/main/Assets/Kina.mp3?raw=true"> </audio>
+
+<button id="musicaBtn" class="icono-musica" onclick="playSound()">♪</button>
+
+
+
+</div>
+
+
+    <style> 
+h1, h2, h3, h4, h5, h6 {
+  font-family: "boucherie-cursive", sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+  color: #5F8292;          
+  margin-top: 50px;      
+  margin-bottom: 20px;     
+  text-align: center;     
+  letter-spacing: 0.5px;
+}
+  
+
+ p {
+      font-size: 16px;
+      line-height: 1.6;
+      max-width: 600px;
+      margin: 0 auto 40px;
+      color: #5F8292;
+     }
+    </style>
+
+
+  <!-- *Sección de inicio -->
+
+ <section id="inicio" class="pantalla active">
+    <h1 class="cartaTitulo">Per folia</h1>
+  <div>
+  <button>Contacto</button>
+    <button id="btnCuaderno">Abrir el cuaderno</button>
+  <br>
+  </div>
+
+</section>
+
+
+  <section id="inicio2" class="pantalla">
+    <button>Contacto</button>
+    <h1 class="cartaTitulo">PER FOLIA</h1>
+<style>
+.cartaTitulo{
+margin: 20%;
+align-self: auto;
+font-size: 5em;
+}
+#inicio{
+  background: radial-gradient(49.17% 371.08% at 50.13% 50.95%, #f3e596c6 0%, #FFFFFF 95.67%);
+  min-height: 100vh;
+  overflow: hidden;
+  }
+</style>
+
+    <button id="btnCuaderno2">Abrir el cuaderno</button>
+    <br>
+ </section>
+
+
+  <!-- *Sección del cuaderno 1 lo que iría con scroll horizontal-->
+
+  <section id="cuaderno">
+
+
+    <style> 
+
+#cuaderno {
+  
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  min-height: 100vh;
+  align-items: center;
+   background: radial-gradient(49.17% 371.08% at 50.13% 50.95%, #DFD8E8 0%, #FFFFFF 95.67%) 
+}
+
+#cuaderno > div {
+  flex: 0 0 100vw;             
+  scroll-snap-align: center;    
+  box-sizing: border-box;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;     
+  justify-content: center;       
+  align-items: center;          
+  background: radial-gradient(49.17% 371.08% at 50.13% 50.95%, #DFD8E8 0%, #FFFFFF 95.67%);
+  padding: 0;
+  margin: 0;
+}
+
+
+#cuaderno p {
+  max-width: 600px;          
+  text-align: justify;
+  white-space: normal;           
+  font-size: 16px;
+    font-style: normal;
+  line-height: 1.6;
+  color: #5F8292;
+  font-family: "boucherie-cursive", sans-serif;
+font-weight: 400;
+font-style: normal;
+}
+
+
+#cuaderno button {
+  margin-top: 20px;
+}
+    </style>
+
+<div> 
+  <h1>17 de abril</h1> 
+  <p>
+    Hoy empiezo un cuaderno nuevo. El papel es grueso y tiene ese olor a "nuevo" que tanto me gusta. Paso un buen rato solo mirando la hoja en blanco. Siempre me cuesta empezar, como si poner el primer trazo fuera una decisión demasiado importante. Finalmente, mojo el pincel y veo caer una mancha azul. No la controlo. Solo la dejo moverse sola por el papel. Me quedo viéndola extenderse, formando una especie de nube. Me gusta cuando el color hace lo que quiere.
+  </p>
+
+  <div class="contenedor-imagen">
+    <span class="texto-hover">Encuentra la ilustración</span>
+ <img class="imagenes" src="https://raw.githubusercontent.com/molinariosvalentina6-droid/Per-Folia---2025-/refs/heads/main/Assets/17%20abril.png"/>
+  </div>
+
+</div>
+
+<style>
+/* NUEVOS ESTILOS PARA IMÁGENES */
+.contenedor-imagen {
+  position: relative;
+  width: 50vw;
+  height: 30vh;
+  margin-top: 20px;
+}
+
+.imagenes {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease;
+  object-fit: contain;
+}
+
+.imagenes.visible {
+  opacity: 1;
+}
+
+.texto-hover {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #5F8292;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  text-align: center;
+  z-index: 2;
+}
+
+.texto-hover.oculto {
+  opacity: 0;
+}
+
+.contenedor-imagen:hover {
+  cursor: pointer;
+}
+
+/* ANIMACIÓN DE TEXTO */
+.texto-animado {
+  transform: scale(0.94);
+  animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
+}
+
+@keyframes scale {
+  100% {
+    transform: scale(1);
+  }
+}
+
+.texto-animado span {
+  display: inline-block;
+  opacity: 0;
+  filter: blur(4px);
+}
+
+@keyframes fade-in {
+  100% {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+</style>
+
+<div> 
+<h2>18 de abril</h2>
+<p>
+Dibujo la taza del desayuno. El vapor se confunde con la sombra y termino usando tonos grises con un poco de violeta. Me gusta cómo queda. El gato se sube a la mesa y deja una huella pequeña sobre el borde de la hoja. Por un momento pienso en borrarla, pero no lo hago. 
+Veo que el cuaderno empieza a llenarse de vida sin planearlo. Cada trazo tiene algo mío y algo de las cosas que me rodean. Me gusta la idea de que al dibujar guardo pedazos del día.
+</p>
+
+  <div class="contenedor-imagen">
+    <span class="texto-hover">Encuentra la ilustración</span>
+   <img class="imagenes" src="https://raw.githubusercontent.com/molinariosvalentina6-droid/Per-Folia---2025-/refs/heads/main/Assets/18%20abril.png"/>
+ </div>
+
+</div>
+
+<div>
+  <h3>22 de abril</h3>
+  <p>
+    Estoy en el parque con mi libreta. Hace sol, pero el viento no me deja pintar tranquila. Cada vez que intento trazar una línea, el papel se mueve. Termino persiguiendo mis propias hojas por el pasto. Aún así, luego logro dibujar unas ramas y la sombra de una fuente. No se parecen mucho a lo real, pero eso no me molesta. Al revisar los dibujos, siento que son más recuerdos que paisajes. Supongo que mi mano dibuja lo que mi mente retiene, no lo que mis ojos ven.
+    </p>
+
+    <div class="contenedor-imagen">
+      <span class="texto-hover">Encuentra la ilustración</span>
+     <img class="imagenes" src="https://raw.githubusercontent.com/molinariosvalentina6-droid/Per-Folia---2025-/refs/heads/main/Assets/22%20abril.png"/>
+ </div>
+
+  <button id="abrirVentana" class="boton-ver">Ver recuerdo</button>
+</div>
+<div id="ventanaEmergente" class="ventana-emergente">
+      <button id="musicaBtn2" onclick="playSound()">Reproducir música de fondo</button>
+  <div class="contenido-ventana">
+        <p> Una vez, cuando era niña, intenté dibujar la cara de mi mamá mientras ella dormía.Tenía miedo de que se despertara y se diera cuenta de que no sabía captar su expresión.El dibujo terminó siendo solo un borrón suave, una sombra. Años después encontré esa hoja y me sorprendió cómo, sin parecerse a ella, igual la recordaba. Como si mi memoria nunca necesitara detalles, solo la sensación. 
+        </p>
+    <button id="cerrarVentana" class="boton-cerrar">Volver al cuaderno</button>
+  </div>
+</div>
+
+<style>
+  .boton-ver {
+   background-color: #FCFACF;
+      color: #1A4C63;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+  }
+
+  .boton-ver:hover {
+    background: #ECD0DE;
+  }
+  
+  .ventana-emergente {
+    display: none;              
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(202, 211, 169, 0.099);
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+  }
+
+  .contenido-ventana {
+    background: #ECD0DE;
+    padding: 20px 25px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+  }
+
+  .boton-cerrar {
+    margin-top: 15px;
+    padding: 8px 12px;
+   background-color: #FCFACF;
+      color: #1A4C63;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+
+  .boton-cerrar:hover {
+    background: #ECD0DE;
+  }
+</style>
+
+
+<script>
+  const abrir = document.getElementById("abrirVentana");
+  const cerrar = document.getElementById("cerrarVentana");
+  const ventana = document.getElementById("ventanaEmergente");
+
+  abrir.addEventListener("click", () =>  {
+    ventana.style.display = "flex";
+  });
+
+  cerrar.addEventListener("click", () => {
+    ventana.style.display = "none";
+  });
+  
+</script>
+
+
+
+<div> 
+<h4>25 de abril</h4>
+<p>
+Hoy quiero usar amarillo. Lo pongo en todos lados: en las flores, en el borde de la ventana, en el cielo, aunque no estaba soleado. El amarillo me da calma. 
+Pintar me relaja. Siento que los colores dicen lo que no me animo a escribir.  
+Me quedo hasta tarde, con la lámpara encendida, mirando cómo se secan las acuarelas. El silencio de la noche y el olor a pintura se mezclan. Es un buen día.
+</p>
+  <div class="contenedor-imagen">
+    <span class="texto-hover">Encuentra la ilustración</span>
+    <img class="imagenes" src="https://raw.githubusercontent.com/molinariosvalentina6-droid/Per-Folia---2025-/refs/heads/main/Assets/25%20abril.png"/>
+ </div>
+
+</div>
+
+<div> 
+<h5>30 de abril</h5>
+<p>
+Me siento junto a la ventana con el cuaderno. Pinto la lluvia cayendo y dejando rastros sobre el vidrio. Dejo que el agua corra sobre la hoja y forme caminos propios. 
+Al terminar, la página tiene ese brillo húmedo que me gusta. A veces creo que mis dibujos se parecen a mí: un poco desordenados, con manchas, pero honestos.
+</p>
+  <div class="contenedor-imagen">
+    <span class="texto-hover">Encuentra la ilustración</span>
+  <img class="imagenes" src="https://raw.githubusercontent.com/molinariosvalentina6-droid/Per-Folia---2025-/refs/heads/main/Assets/30%20abril.png"/>
+ </div>
+
+</div>
+
+<div> 
+<h6>7 de mayo</h6>
+<p>
+No duermo bien. Esta mañana todo me cuesta. El agua del pincel está sucia y ni siquiera tengo ganas de cambiarla. Intento dibujar algo, cualquier cosa, pero los colores se ven apagados. 
+El azul, mi color favorito, se vuelve gris. No sé si es por el agua o por mí. Cierro el cuaderno antes de terminar la hoja. No quiero seguir. 
+</p>
+  <div class="contenedor-imagen">
+    <span class="texto-hover">Encuentra la ilustración</span>
+    <img class="imagenes" src="https://raw.githubusercontent.com/molinariosvalentina6-droid/Per-Folia---2025-/refs/heads/main/Assets/7%20mayo.png"/>
+</div>
+
+</div>
+
+
+<div>
+<h6 class="nivel7">11 de mayo</h6>
+  <p>
+Hoy vuelvo a intentarlo, pero termino borrando todo lo que hago. El papel se arruga, lleno de marcas. Me duele ver cómo se rompe un poco con cada trazo que borro. 
+No sé por qué nada me gusta últimamente. Me siento torpe, como si hubiera olvidado cómo dibujar. Ni siquiera sé qué quiero pintar. 
+  </p>
+    <div class="contenedor-imagen">
+      <span class="texto-hover">Encuentra la ilustración</span>
+      <img class="imagenes" src="https://raw.githubusercontent.com/molinariosvalentina6-droid/Per-Folia---2025-/refs/heads/main/Assets/12%20junio.png"/>
+    </div>
+
+  <button id="abrirVentana1" class="boton-ver">Ver recuerdo</button>
+</div>
+
+<div id="ventanaEmergente1" class="ventana-emergente">
+      <button id="musicaBtn3" onclick="playSound()">Reproducir música de fondo</button>
+  <div class="contenido-ventana">
+    <p>
+     Hubo un día, hace meses, en que intenté aprender a tocar guitarra. 
+     Practiqué un acorde hasta que me dolieron los dedos. Cada vez sonaba más 
+     sucio, más lejos de lo que quería. Al final dejé el instrumento apoyado 
+     en la pared, derrotado. A veces, cuando la frustración vuelve, me acuerdo 
+     de ese acorde torcido: no era bonito, pero fue lo más sincero que hice en 
+     ese momento.  
+    </p>
+    <button id="cerrarVentana1" class="boton-cerrar">Volver al cuaderno</button>
+  </div>
+</div>
+
+<script>
+  const abrir1 = document.getElementById("abrirVentana1");
+  const cerrar1 = document.getElementById("cerrarVentana1");
+  const ventana1 = document.getElementById("ventanaEmergente1");
+
+  abrir1.addEventListener("click", () => {
+    ventana1.style.display = "flex";
+  });
+
+  cerrar1.addEventListener("click", () => {
+    ventana1.style.display = "none";
+  });
+</script>
+
+<div> 
+<h6 class="nivel8">17 de mayo</h6>
+<p>
+Hoy decido no usar color. Solo tomo un lápiz y empiezo a hacer líneas, una encima de otra, sin pensar. 
+Me quedo mirando el resultado y no siento nada. Solo cansancio. 
+A veces me pregunto si el dibujo también se cansa de mí, si el papel siente mi desánimo.  
+</p>
+  <div class="contenedor-imagen">
+    <span class="texto-hover">Encuentra la ilustración</span>
+    <img class="imagenes" src="https://raw.githubusercontent.com/molinariosvalentina6-droid/Per-Folia---2025-/refs/heads/main/Assets/17%20mayo.png"/>
+ </div>
+
+</div>
+
+<div> 
+<h6 class="nivel9">20 de mayo</h6>
+<p>
+Noto una mancha en la esquina inferior de una página. No recuerdo haberla hecho. Es pequeña, pero no puedo dejar de mirarla. 
+No sé si me gusta o me molesta, pero no tengo ganas de taparla. La dejo ahí, quieta, como un recuerdo que no sé si quiero o no. 
+</p>
+  <div class="contenedor-imagen">
+    <span class="texto-hover">Encuentra la ilustración</span>
+    <img class="imagenes" src="https://raw.githubusercontent.com/molinariosvalentina6-droid/Per-Folia---2025-/refs/heads/main/Assets/12%20junio.png"/>
+  </div>
+
+</div>
+
+<div> 
+<h6 class="nivel10">26 de mayo</h6>
+<p>
+Hoy no dibujo. Abro el cuaderno, lo miro, y lo cierro sin tocar nada. 
+No tengo fuerzas. Todo se siente igual, como si los días pasaran sin dejar rastro. 
+El papel sigue en blanco, esperándome. Pero yo no tengo nada para contarle. 
+</p>
+  <div class="contenedor-imagen">
+    <span class="texto-hover">Encuentra la ilustración</span>
+    <img class="imagenes" src="https://raw.githubusercontent.com/molinariosvalentina6-droid/Per-Folia---2025-/refs/heads/main/Assets/12%20junio.png"/>
+  </div>
+
+</div>
+
+<div>
+<h6 class="nivel11">30 de mayo</h6>
+<p>
+Reviso mis dibujos antiguos. Intento pintar otra vez la playa que hice en febrero. Antes era luminosa, pero ahora no puedo. El mar se borra solo, como si no quisiera estar ahí. 
+Me quedo mirando la hoja en silencio. Siento una especie de vacío, pero no tristeza. Solo cansancio. 
+Tal vez el cuaderno y yo necesitamos un descanso. 
+</p>
+  <div class="contenedor-imagen">
+    <span class="texto-hover">Encuentra la ilustración</span>
+    <img class="imagenes" src="https://raw.githubusercontent.com/molinariosvalentina6-droid/Per-Folia---2025-/refs/heads/main/Assets/30%20mayo.png"/>
+ </div>
+
+ <button id="abrirVentana2" class="boton-ver">Ver recuerdo</button>
+</div>
+
+<div id="ventanaEmergente2" class="ventana-emergente">
+      <button id="musicaBtn4" onclick="playSound()">Reproducir música de fondo</button>
+  <div class="contenido-ventana">
+    <p>
+      Hace un año viajé a una laguna. Era un lugar hermoso, pero cuando llegué no sentí nada. Todos hablaban de lo impresionante que era el paisaje, del color del agua, del silencio perfecto. Yo solo miraba sin poder conectar. Pensé que algo estaba mal conmigo. Ese día entendí que hay momentos en los que uno solo puede estar, sin sentir. Y eso también es una forma de mirar.
+    </p>
+    <button id="cerrarVentana2" class="boton-cerrar">Volver al cuaderno</button>
+  </div>
+</div>
+
+<script>
+  const abrir2 = document.getElementById("abrirVentana2");
+  const cerrar2 = document.getElementById("cerrarVentana2");
+  const ventana2 = document.getElementById("ventanaEmergente2");
+
+  abrir2.addEventListener("click", () => {
+    ventana2.style.display = "flex";
+  });
+
+  cerrar2.addEventListener("click", () => {
+    ventana2.style.display = "none";
+  });
+</script>
+
+<div> 
+<h6 class="nivel12">6 de junio</h6>
+<p>
+Abro el cuaderno después de varios días. No sé si voy a poder dibujar algo, pero lo hago. 
+Paso los dedos por las manchas viejas y me sorprende que ya no me duelan. Son solo colores, rastros de algo que fui. 
+Hago un trazo torcido, sin pensar demasiado. Antes lo habría borrado, pero hoy lo dejo. Me parece bien así. Me doy cuenta de que puedo empezar otra vez, aunque no sepa cómo. 
+</p>
+  <div class="contenedor-imagen">
+    <span class="texto-hover">Encuentra la ilustración</span>
+    <img class="imagenes" src="https://raw.githubusercontent.com/molinariosvalentina6-droid/Per-Folia---2025-/refs/heads/main/Assets/12%20junio.png"/>
+  </div>
+
+</div>
+
+<div> 
+<h6 class="nivel13">9 de junio</h6>
+<p>
+Hoy quiero cambiar, así que uso verde pálido, un tono suave que casi se pierde en el papel. No quiero llenar la hoja. Solo hago una curva y un punto. Me gusta ver el espacio vacío. 
+Antes me daba miedo dejar las cosas incompletas. Ahora me parece que el blanco también forma parte del dibujo. Tal vez no se trata de llenar todo, sino de aprender a dejar espacio. 
+</p>
+  <div class="contenedor-imagen">
+    <span class="texto-hover">Encuentra la ilustración</span>
+    <img class="imagenes" src="https://raw.githubusercontent.com/molinariosvalentina6-droid/Per-Folia---2025-/refs/heads/main/Assets/12%20junio.png"/>
+  </div>
+
+</div>
+
+<div> 
+<h6 class="nivel14">12 de junio</h6>
+<p>
+Me doy cuenta de que ya no dibujo igual. Antes buscaba que las cosas se parecieran a lo que veía. Ahora solo dejo que el color se mueva. 
+Hoy hago una mancha que parece una nube y otra que se vuelve árbol. No las planeo. 
+Mientras pinto, siento algo parecido a tranquilidad. No felicidad, pero sí descanso. Creo que eso ya es bastante. 
+</p>
+  <div class="contenedor-imagen">
+    <span class="texto-hover">Encuentra la ilustración</span>
+   <img class="imagenes" src="https://raw.githubusercontent.com/molinariosvalentina6-droid/Per-Folia---2025-/refs/heads/main/Assets/12%20junio.png"/>
+ </div>
+
+<button id="abrirVentana3" class="boton-ver">Ver recuerdo</button>
+   
+</div>
+
+<div id="ventanaEmergente3" class="ventana-emergente">
+    <button id="musicaBtn5" onclick="playSound()">Reproducir música de fondo</button>
+  <div class="contenido-ventana">
+    <p>
+      Cuando tenía quince años intenté restaurar un cuaderno muy viejo de mi abuelo. Sus páginas estaban amarillas y llenas de manchas de tinta. Yo quería dejarlo perfecto, como nuevo. Pero mientras lo limpiaba me di cuenta de que, si borraba demasiado, también borraría sus rastros. Me detuve. Ese día entendí que hay cosas que se guardan mejor si se aceptan tal como son.
+    </p>
+    <button id="cerrarVentana3" class="boton-cerrar">Volver al cuaderno</button>
+  </div>
+</div>
+
+<script>
+  const abrir3 = document.getElementById("abrirVentana3");
+  const cerrar3 = document.getElementById("cerrarVentana3");
+  const ventana3 = document.getElementById("ventanaEmergente3");
+
+  abrir3.addEventListener("click", () => {
+    ventana3.style.display = "flex";
+  });
+
+  cerrar3.addEventListener("click", () => {
+    ventana3.style.display = "none";
+  });
+</script>
+
+<div> 
+  <h6 class="nivel15">15 de junio</h6>
+<p>
+Salgo a caminar sin el cuaderno. No siento culpa por hacerlo. El aire está fresco y el cielo limpio. 
+Cuando regreso, dibujo una línea larga que cruza la página y se pierde al final. No sé si es el mar o un camino, pero me gusta verla así, simple. 
+Por primera vez en mucho tiempo, no quiero corregir nada. 
+</p>
+  <div class="contenedor-imagen">
+    <span class="texto-hover">Encuentra la ilustración</span>
+    <img class="imagenes" src="https://raw.githubusercontent.com/molinariosvalentina6-droid/Per-Folia---2025-/refs/heads/main/Assets/12%20junio.png"/>
+  </div>
+
+</div>
+
+<div> 
+<h6 class="nivel16">20 de junio</h6>
+<p>
+Hoy vuelvo al azul, pero no al de antes. Este es más claro, más suave. Lo dejo correr sobre el papel sin pensarlo. 
+Mientras se seca, noto que ya no me duele mirar mis dibujos. 
+No siento la necesidad de entenderlos. Solo de seguir haciendo más. 
+</p>
+  <div class="contenedor-imagen">
+    <span class="texto-hover">Encuentra la ilustración</span>
+    <img class="imagenes" src="https://raw.githubusercontent.com/molinariosvalentina6-droid/Per-Folia---2025-/refs/heads/main/Assets/20%20junio.png"/>
+ </div>
+
+</div>
+
+<div> 
+<h6 class="nivel17">23 de junio</h6>
+<p>
+Cierro el cuaderno. Escucho el ruido de las hojas al juntarse y me da una sensación de paz. 
+No creo haber terminado, pero no tengo prisa. 
+
+El cuaderno está lleno de cosas que no sé explicar, pero me gusta. 
+Lo dejo sobre la mesa, al lado del vaso de agua y los pinceles. 
+Por primera vez en mucho tiempo, siento que el silencio no duele. Solo acompaña. 
+</p>
+  <div class="contenedor-imagen">
+    <span class="texto-hover">Encuentra la ilustración</span>
+    <img class="imagenes" src="https://raw.githubusercontent.com/molinariosvalentina6-droid/Per-Folia---2025-/refs/heads/main/Assets/23%20junio.png"/>
+ </div>
+
+</div>
+
+  </section>
+
+<style>
+  #musica {
+  position: sticky ;
+top: 0;
+}
+  .pantalla {
+  display: none;           /* Oculta todas las pantallas por defecto */
+  height: 100vh;           /* Ocupa toda la pantalla */
+  width: 100%;
+  padding: 20px;
+}
+
+/* Mostrar solo la que tenga la clase active */
+.pantalla.active {
+  display: block;
+}
+
+#inicio {
+  background: radial-gradient(49.17% 371.08% at 50.13% 50.95%, #f3e596c6 0%, #FFFFFF 95.67%);
+}
+
+#cuaderno {
+  background: #ffffff;
+}
+
+</style>
+<script>
+  const inicio = document.getElementById("inicio");
+  const cuaderno = document.getElementById("cuaderno");
+  const btnCuaderno = document.getElementById("btnCuaderno");
+  const btnCuaderno2 = document.getElementById("btnCuaderno2");
+  const btnVolver = document.getElementById("btnVolver");
+
+  const abrirCuaderno = () => {
+    inicio.classList.remove("active");
+    cuaderno.classList.add("active");
+  };
+
+  if (btnCuaderno) {
+    btnCuaderno.addEventListener("click", abrirCuaderno);
+  }
+
+  if (btnCuaderno2) {
+    btnCuaderno2.addEventListener("click", abrirCuaderno);
+  }
+
+  if (btnVolver) {
+    btnVolver.addEventListener("click", () => {
+      cuaderno.classList.remove("active");
+      inicio.classList.add("active");
+    });
+  }
+</script>
+<!-- SCRIPT PARA ANIMACIÓN DE TEXTOS -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const cuaderno = document.getElementById('cuaderno');
+  const secciones = document.querySelectorAll('#cuaderno > div');
+ 
+  // Función para preparar animación
+  function prepararAnimacion(elemento) {
+    const palabras = elemento.textContent.trim().split(' ');
+    elemento.innerHTML = '';
+    elemento.classList.add('texto-animado');
+    elemento.dataset.animado = 'false';
+   
+    palabras.forEach((palabra, index) => {
+      const span = document.createElement('span');
+      span.textContent = palabra;
+      span.style.display = 'inline-block';
+      span.style.opacity = '0';
+      span.style.filter = 'blur(4px)';
+      elemento.appendChild(span);
+     
+      if (index < palabras.length - 1) {
+        elemento.appendChild(document.createTextNode(' '));
+      }
+    });
+  }
+ 
+  // Función para animar elemento
+  function animarElemento(elemento) {
+    elemento.dataset.animado = 'true';
+    const spans = elemento.querySelectorAll('span');
+    spans.forEach((span, i) => {
+      span.style.animation = `fade-in 0.8s ${i * 0.05}s forwards cubic-bezier(0.11, 0, 0.5, 0)`;
+    });
+  }
+ 
+  // Preparar todos los textos Y TÍTULOS
+  secciones.forEach((seccion, seccionIndex) => {
+    // Animar títulos (h1, h2, h3, h4, h5, h6)
+    const titulo = seccion.querySelector('h1, h2, h3, h4, h5, h6');
+    if (titulo) {
+      prepararAnimacion(titulo);
+    }
+   
+    // Animar párrafos
+    const texto = seccion.querySelector('p');
+    if (texto) {
+      prepararAnimacion(texto);
+    }
+  });
+ 
+  // Animar el primer texto Y título inmediatamente
+  const primerTitulo = secciones[0].querySelector('h1, h2, h3, h4, h5, h6');
+  const primerTexto = secciones[0].querySelector('p');
+
+  if (primerTitulo) {
+    animarElemento(primerTitulo);
+  }
+  if (primerTexto) {
+    animarElemento(primerTexto);
+  }
+ 
+  // Detectar scroll horizontal
+  cuaderno.addEventListener('scroll', () => {
+    secciones.forEach(seccion => {
+      const rect = seccion.getBoundingClientRect();
+      const titulo = seccion.querySelector('h1, h2, h3, h4, h5, h6');
+      const texto = seccion.querySelector('p');
+     
+      // Animar títulos
+      if (titulo) {
+        if (rect.left < window.innerWidth && rect.right > 0) {
+          if (titulo.dataset.animado === 'false') {
+            animarElemento(titulo);
+          }
+        } else {
+          if (titulo.dataset.animado === 'true') {
+            titulo.dataset.animado = 'false';
+            const spans = titulo.querySelectorAll('span');
+            spans.forEach(span => {
+              span.style.animation = 'none';
+              span.style.opacity = '0';
+              span.style.filter = 'blur(4px)';
+            });
+          }
+        }
+      }
+     
+      // Animar textos
+      if (texto) {
+        if (rect.left < window.innerWidth && rect.right > 0) {
+          if (texto.dataset.animado === 'false') {
+            animarElemento(texto);
+          }
+        } else {
+          if (texto.dataset.animado === 'true') {
+            texto.dataset.animado = 'false';
+            const spans = texto.querySelectorAll('span');
+            spans.forEach(span => {
+              span.style.animation = 'none';
+              span.style.opacity = '0';
+              span.style.filter = 'blur(4px)';
+            });
+          }
+        }
+      }
+    });
+  });
+});
+</script>
+<!-- SCRIPT PARA MOSTRAR IMÁGENES AL HOVER -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const contenedores = document.querySelectorAll('.contenedor-imagen');
+  
+  contenedores.forEach(contenedor => {
+    const imagen = contenedor.querySelector('.imagenes');
+    const textoHover = contenedor.querySelector('.texto-hover');
+    
+    if (imagen && textoHover) {
+      contenedor.addEventListener('mouseenter', function() {
+        // Mostrar imagen permanentemente
+        imagen.classList.add('visible');
+        
+        // Ocultar texto después de un momento
+        setTimeout(() => {
+          textoHover.classList.add('oculto');
+        }, 500);
+      });
+    }
+  });
+});
+</script>
+
+<script>
+// Control de audio
+function playSound() {
+  let audio = document.getElementById("musicaFondo");
+  if(audio.paused) {
+    audio.play();
+  } else {
+    audio.pause();
+  }
+}
+</script>
+
+<script>
+// SCRIPT PARA ANIMAR TEXTOS DE VENTANAS EMERGENTES
+document.addEventListener('DOMContentLoaded', function() {
+  // Función para preparar animación (reutilizada)
+  function prepararAnimacionVentana(elemento) {
+    const palabras = elemento.textContent.trim().split(' ');
+    elemento.innerHTML = '';
+    elemento.classList.add('texto-animado');
+    
+    palabras.forEach((palabra, index) => {
+      const span = document.createElement('span');
+      span.textContent = palabra;
+      span.style.display = 'inline-block';
+      span.style.opacity = '0';
+      span.style.filter = 'blur(4px)';
+      elemento.appendChild(span);
+      
+      if (index < palabras.length - 1) {
+        elemento.appendChild(document.createTextNode(' '));
+      }
+    });
+  }
+  
+  // Función para animar elemento
+  function animarElementoVentana(elemento) {
+    const spans = elemento.querySelectorAll('span');
+    spans.forEach((span, i) => {
+      span.style.animation = `fade-in 0.8s ${i * 0.05}s forwards cubic-bezier(0.11, 0, 0.5, 0)`;
+    });
+  }
+  
+  // Preparar textos de todas las ventanas emergentes
+  const ventanas = document.querySelectorAll('.ventana-emergente');
+  
+  ventanas.forEach(ventana => {
+    const textoVentana = ventana.querySelector('.contenido-ventana p');
+    if (textoVentana) {
+      prepararAnimacionVentana(textoVentana);
+    }
+  });
+  
+  // Animar cuando se abra cada ventana
+  const botonesAbrir = document.querySelectorAll('[id^="abrirVentana"]');
+  
+  botonesAbrir.forEach((boton, index) => {
+    boton.addEventListener('click', () => {
+      // Buscar la ventana correspondiente
+      let ventanaId = 'ventanaEmergente';
+      if (index > 0) {
+        ventanaId = 'ventanaEmergente' + index;
+      }
+      
+      const ventana = document.getElementById(ventanaId);
+      if (ventana) {
+        const textoVentana = ventana.querySelector('.contenido-ventana p');
+        if (textoVentana) {
+          // Resetear y animar
+          const spans = textoVentana.querySelectorAll('span');
+          spans.forEach(span => {
+            span.style.animation = 'none';
+            span.style.opacity = '0';
+            span.style.filter = 'blur(4px)';
+          });
+          
+          // Pequeño delay para que se vea la animación
+          setTimeout(() => {
+            animarElementoVentana(textoVentana);
+          }, 50);
+        }
+      }
+    });
+  });
+});
+</script>
+
+</body>
+</html>
