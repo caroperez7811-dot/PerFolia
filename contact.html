@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contacto — Per folia</title>
+  <style>
+    :root{
+      --bg: #fffaf0;
+      --accent: #FCFACF;
+      --text: #1A4C63;
+      --container: 1100px;
+      --gap: 28px;
+      --radius: 10px;
+      font-family: "boucherie-cursive", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+
+    body {
+      margin:0;
+      background: var(--bg);
+      color: var(--text);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      padding: 28px;
+    }
+
+    /* botón volver en la esquina superior izquierda (más arriba) */
+    .back-top {
+      position: fixed;
+      top: 12px;            /* un poco más arriba */
+      left: 12px;
+      z-index: 100020;
+      background: var(--accent);
+      color: var(--text);
+      padding: 12px 16px;   /* aumentado */
+      border-radius: 10px;  /* más redondeado */
+      text-decoration: none;
+      box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+      font-size: 15px;
+    }
+
+    /* evitar que el back-top tape el hero: espacio superior */
+    .top {
+      max-width: var(--container);
+      margin: 0 auto 28px;
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap: var(--gap);
+      padding-top: 60px;    /* espacio para el botón volver */
+    }
+
+    /* pequeño ajuste responsive por si hace falta */
+    @media (max-width: 880px) {
+      .top { padding-top: 42px; }
+    }
+
+    .hero {
+      display:flex;
+      gap: var(--gap);
+      width:100%;
+      align-items:center;
+      justify-content:space-between;
+      flex-wrap:wrap;
+    }
+
+    .hero-text {
+      flex: 1 1 58%;
+      min-width: 260px;
+      line-height:1.5;
+      font-size: 16px;
+      color: var(--text);
+    }
+
+    .hero-logo {
+      flex: 0 0 34%;
+      min-width: 160px;
+      display:flex;
+      align-items:center;
+      justify-content:flex-end;
+    }
+
+    /* título grande ahora usa "Per folia" */
+    .logo-title {
+      font-size: clamp(48px, 10vw, 120px);
+      line-height: 0.9;
+      color: rgba(26,76,99,0.95);
+      letter-spacing: 0.02em;
+      margin: 0;
+      text-align: right;
+      user-select: none;
+    }
+
+    /* Form area */
+    .container {
+      max-width: var(--container);
+      margin: 28px auto 0;
+      padding: 22px;
+      background: rgba(255,255,255,0.6);
+      border-radius: var(--radius);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+    }
+
+    a.home {
+      display:inline-block;
+      margin-bottom:18px;
+      color:var(--text);
+      text-decoration:none;
+      background: var(--accent);
+      padding:8px 12px;
+      border-radius:8px;
+    }
+
+    h1 { font-size:20px; margin:0 0 12px; }
+
+    label, input, textarea { display:block; width:100%; margin-bottom:12px; font-family:inherit; }
+    input, textarea {
+      padding:10px;
+      border-radius:6px;
+      border:1px solid rgba(0,0,0,0.08);
+      font-size:14px;
+      color:var(--text);
+      background: #fff;
+    }
+    button { background:var(--accent); color:var(--text); padding:10px 14px; border-radius:8px; border:none; cursor:pointer; }
+
+    /* responsive */
+    @media (max-width: 880px) {
+      .hero { flex-direction: column-reverse; align-items:flex-start; }
+      .hero-logo { width:100%; justify-content:flex-start; margin-bottom:8px; }
+      .logo-title { text-align: left; }
+      .hero-text { flex-basis:100%; }
+      .container { padding:16px; }
+    }
+  </style>
+</head>
+<body>
+  <!-- enlace Volver en la esquina superior (visible siempre) -->
+  <a class="back-top" href="index.html">← Volver</a>
+
+  <div class="top">
+    <div class="hero">
+      <div class="hero-text" aria-hidden="false">
+        <strong>Longline</strong>
+        <p>
+          Una artista transforma su cuaderno de dibujo en un mapa íntimo: al recorrer sus páginas, atravesamos los paisajes que visita y los trazos que la sostienen, mientras su duelo se revela en los silencios del papel más que en las palabras.
+        </p>
+        <p>
+          Storyline: En su diario ilustrado, una artista registra los lugares a los que viaja tras una pérdida que nunca menciona directamente. Cada dibujo nos invita a entrar en su mundo: una playa donde el mar borra los rostros, un bosque que se disuelve en manchas de tinta, una ciudad donde los colores se van apagando. A medida que avanzamos por las páginas, los trazos se vuelven más livianos, los espacios más vacíos, hasta que el viaje llega a su última hoja. Allí, el papel queda casi en blanco, apenas con una línea que se detiene en el borde, como si la artista, finalmente, hubiera soltado el peso que la acompañaba.
+        </p>
+      </div>
+
+      <div class="hero-logo" aria-hidden="true">
+        <!-- Título grande cambiado a "Per folia" -->
+        <h2 class="logo-title">Per folia</h2>
+      </div>
+    </div>
+  </div>
+
+  <main class="container" role="main">
+    <!-- enlace adicional dentro del contenido (se conserva) -->
+  
+    <h1>Contacto</h1>
+    <p>Escribe aquí tu mensaje</p>
+    <form action="#" method="post">
+      <label for="name">Nombre</label>
+      <input id="name" name="name" type="text" />
+
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" />
+
+      <label for="message">Mensaje</label>
+      <textarea id="message" name="message" rows="6"></textarea>
+
+      <button type="submit">Enviar</button>
+    </form>
+  </main>
+</body>
+</html>
